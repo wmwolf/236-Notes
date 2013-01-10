@@ -1,0 +1,125 @@
+\documentclass[10pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Package Inclusion and Document Formatting %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage
+{geometry,amsmath,amsthm,mathrsfs,amssymb,graphicx,bm,hyperref,url,pdfsync,
+fancyhdr}
+\pagestyle{fancy}
+\numberwithin{equation}{section}
+%%%%%%%%%%%%%%%%%%%
+% Custom Commands %
+%%%%%%%%%%%%%%%%%%%
+\newcommand{\n}{\noindent}
+\newcommand{\norm}[1]{\left\lvert#1\right\rvert}
+\newcommand{\avg}[1]{\left\langle#1\right\rangle}
+\newcommand{\abs}[1]{\left\vert#1\right\vert}
+\newcommand{\figref}[1]{Figure \ref{#1}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Title Page Information %
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{Notes for PHYS 236: Cosmology}
+\author{Bill Wolf}
+\date{\today}
+
+\begin{document}
+
+\vfill\maketitle\vfill \newpage
+
+\tableofcontents \newpage
+
+%%%%%%%%%%%%%%%%%%%%%%
+% January 9, 2013 %
+%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Introduction} % (fold)
+\label{sec:introduction}
+	\emph{Monday, January 9, 2013}\\
+	
+	\n Cosmology is essentially the study of the origin and evolution of the universe. The cosmologist attempts to discover if and how the universe is evolving, when it formed, how old/big it is, etc. Understanding the dynamics and geometry of the universe is essential for a complete picture of universal evolution. To date, we have a pretty convincing model, the Big Bang Theory (BBT), which explains a vast amount of observations, but questions remain. In addition, almost none of the predictions by the BBT can be measured in a laboratory, so we are forced to rely on observations.\\
+	
+	\n The basic idea of the BBT is that the universe began as a very hot place and has been expanding ever since. A period of extremely rapid expansion, called the inflationary period, caused small perturbations in the density of the universe to become macroscopic artifacts. The very much cooled and expanded universe is what we observe today, but in between, many interesting things must have happened, including the nucleosynthesis of primordial elements, ionization, and various changes to the rate of cosmic expansion.
+	
+	\subsection{The Long View} % (fold)
+	\label{sub:the_long_view}
+	
+	Some classic examples of observations supported by the big bang theory include
+	\begin{itemize}
+		\item \textbf{Olbers' Paradox}: the universe, if infinite, should be infinitely bright, and yet we observe darkness
+		\item \textbf{Hubble's Law}: far away galaxies are moving away from us at a rate proportional to their distance from us
+		\item \textbf{The Cosmic microwave background (CMB)}: A nearly uniform background radiation at around 2.7 K as a perfect black body
+		\item \textbf{He abundance in stars}: stars have nearly uniformly 28\% He when first born
+	\end{itemize}
+	However the BBT is not without flaws. Some difficulties remain, including
+	\begin{itemize}
+		\item \textbf{The Horizon Problem}: Points in the universe that are causally disconnected are very much similar. This is mostly solved by the theory of inflation.
+		\item \textbf{The Flatness Problem}: The universe can only have three geometries: closed, open, or flat. There is no reason to expect the universe to be flat, and yet it appears to be flat to a very high precision. This, too, is solved by the inflation theory, which says that the universe will have expanded so greatly that any curvature is undetectable.
+		\item \textbf{The Baryon Asymmetry Problem}: Why do we primarily have matter and very little anti-matter?
+		\item \textbf{The Primordial Fluctuations Problem}: What caused the primordial fluctuations that gave rise to the first galaxies?
+		\item \textbf{The Fine-Tuning Problem}: The energy densities of matter, radiation, curvature, and dark energy seem to be uniquely balanced to produce the flat universe that we observe. This is more of a philosophical problem than a scientific problem (think anthropic principle).
+		\item \textbf{What is the Universe Made Of?} Two huge components of the universe are dark energy and dark matter. We know next to nothing about the nature of these mysterious forms of energy and cannot reproduce their effects in the laboratory.
+	\end{itemize}
+	There are also some interesting epistemological issues that arise from the fact that cosmology is not a classical scientific problem. We only have \emph{one} universe with \emph{one} specific location within that universe, and we can only observe from \emph{one} particular time in the evolution of this universe. We are thus very limited in our view of the universe, and we require assumptions to simplify our observations.\\
+	
+	\n One of those assumptions is the so-called \textbf{Cosmological Principle}, which postulates that our point of view is not special in any way. Earth is not in any particularly special point and we aren't in a particularly special time. This assumes that the laws of physics are independent of space and time. This is also a natural outgrowth of Ockham's razor (explanations should be as simple as possible). On large enough length scales, these assumptions are quite accurate, but we also see that on small enough scales, there are ``special'' places. For example, we are in a galaxy, but the majority of the universe is not galactic.
+	% subsection the_long_view (end)	
+	\subsection{The Game Plan} % (fold)
+	\label{sub:the_game_plan}
+		The course has a five-part plan:
+		\begin{itemize}
+			\item \textbf{Part 0}: Basic Phenomenology (L2-4)
+			\item \textbf{Part I}: The (Smooth) Average Universe (L5-10)
+			\item \textbf{Part II}: The Growth of Fluctuations (L11-L15)
+			\item \textbf{Part III}: Very Early Universe (L20)
+			\item \textbf{Part IV}: Class Presentations
+		\end{itemize}
+		To cover this material, we must introduce some particular units and concepts useful to cosmologists:
+		\begin{itemize}
+			\item \textbf{Parsec} (pc): The distance that gives a parallax of 1 arcsecond $\approx 3.08\times 10^{16}\,\mathrm{m}$
+			\item \textbf{Solar Mass} ($M_\odot$): $\approx 2\times10^{30}\,\mathrm{kg} = 2\times 10^{33}\ \mathrm{g}$
+			\item \textbf{Solar Luminosity} ($L_\odot$): $\approx 3.8\times 10^{26}\ \mathrm{W} = 3.8\times 10^{33}\ \mathrm{erg/s}$
+			\item \textbf{Redshift} ($z$): $\equiv \lambda/\lambda_0-1$
+			\item \textbf{Apparent Magnitude} ($m$): A measure of flux
+			\begin{itemize}
+				\item $m=-2.5\log F/F_0$ for some zero-point flux, $F_0$ (usually that of Vega)
+				\item Letters indicate a particular band (filter) a magnitude is measured in (classic Johnson UBV filters, for example). There are \emph{many} different bands in use. Ex. $m_U$ or simply $U$ would be the $U$-band magnitude, or $m_U=-2.5 \log F_U/F_{0,U}$.
+			\end{itemize}
+			\item \textbf{Absolute Magnitude} ($M$) A measure of luminosity, defined as what the apparent magnitude of an object \emph{would} be if it were located at a distance of 10 pc.
+			\begin{itemize}
+				\item For the sun, $M_V = -4.83$ (the absolute magnitude in the $V$-band)
+				\item For the Andromeda galaxy, $M_V\sim -20$
+			\end{itemize}
+		\end{itemize}
+	% subsection the_game_plan (end)
+
+% section introduction (end)	
+
+\section{Phenomenology} % (fold)
+\label{sec:phenomenology}
+	One of the simplest indicators that our universe is not both infinite in extent and time (eternal and infinite) is \textbf{Olbers' Paradox}. This paradox states that if the universe were infinite and eternal, there should be a more or less uniform distribution of stars. Though the intensity of the stars' light would decrease by $1/r^2$, the number of emitters present also \emph{increases} by a factor of $r^2$, so the entire night sky should be as bright as the sun. Any light that runs into gas or something else would always be reprocessed, possibly at another wavelength, but it would still get to us. The BBT solves this paradox by limiting the \emph{age} of the universe. When looking further away, we are looking back in time, eventually reaching a point where stars did not exist yet, truncating the infinite star problem.\\
+	
+	\n While we can look back in time by looking further away, we unfortunately cannot look at the same place and see multiple times. Instead, we have to make theories about how parts of the universe at certain times evolve to other parts of the universe at later time.\\
+	
+	\n Another, more recent, observation that is indicative of the Big Bang is Hubble's law. Hubble looked at distant galaxies using Cepheid variables to determine their distance. He took spectra of these galaxies and noted that the spectral lines were nearly always shifted to the red. When he plotted this redshift against the distance, he found a linear relation between distance and velocity, namely
+	\begin{equation}
+		\label{eq:1} v = H_0 d
+	\end{equation}
+	where $v$ is the ``velocity'' (though the objects are really at rest\ldots more on this later), $H_0$ is the so-called \textbf{Hubble Constant} (which is not a real constant), and $d$ is the distance to the galaxy.\\
+	
+	\n A still more recent observation that supports the BBT is the observation of the \textbf{Cosmic Microwave Background}. When observing the universe in the microwave regime, and after subtracting out motion due to peculiar velocities, we see a nearly-perfect blackbody at $T=2.725\pm 0.001\ \mathrm{K}$. There are under-densities and over-densities that eventually give way to galaxies.\\
+	
+	\n Another interesting property of the universe that begs for understanding is the large-scale structure (LSS) of the universe. We see that galaxies are not uniformly distributed at random, at least on large scales. Rather, the universe is organized into filaments and walls of galaxies (so-called superclusters) and large voids that are under-dense in matter. This is a direct result of the action of heavy dark matter particles and the remnants of the fluctuations in the CMB.\\
+	
+	\n The basic building blocks in cosmology are galaxies rather than stars. A \textbf{galaxy} is a self-gravitating set of stars, gas, and dark matter. Their typical length scale is a kiloparsec for the baryonic matter and hundreds of kiloparsecs for the dark matter halo, a region with few baryons but relatively high dark matter density. In fact, most of the mass is contained in the dark matter halo, usually around $10^{7}$ to $10^{13}\,M_\odot$. The upper limit to the mass of galaxies is set by the dynamics of the collapse of structures, but the lower limit is a bit of a mystery that may have something to do with the physics of dark matter. The mass contained in stars is at most only a few percent, and the majority of the baryons are in the cold and hot gas known as the \textbf{interstellar medium}. Most galaxies are known to have many satellite and dark subhalos. \\
+	
+	\n Galaxies can be classified by their morphologies and are often organized by Hubble's tuning fork diagram with elliptical galaxies on the ``handle'' and normal and barred spiral galaxies on the ``tines''. The older elliptical galaxies typically showcase very little to no star formation and thus are red and ``dead'' (since blue stars are typically young). They are typically the largest galaxies with masses up to $10^{12}\,M_\odot$ and feature a hot, X-ray emitting halo. They are often found at the center of groups and clusters in highly clustered formations. With no clear axis of rotation, they are supported by pressure (rather than rotation) and their surface brightness can be described by De Vaucouleurs' law. There are also small elliptical galaxies, down to dwarf sizes that are typically younger and feature stronger rotational support and Seric brightness profiles.\\
+	
+	\n Spiral galaxies like the Milky Way and Andromeda, on the other hand, have younger stellar populations and thus appear bluer. They are rotationally supported and are rich in cold gas. The spiral ``arms'' are not really entities in and of themselves, but more so moving density waves. There are two main baryonic components to a spiral galaxy: its central bulge and the disk.\\
+	
+	\n A larger ``unit'' of cosmology is a galaxy cluster. \textbf{Galaxy Clusters} are massive systems, typically with $M> 10^{14}\,M_\odot$. They are often rich in very hot gas (with $kT\sim \mathrm{keV}$ and above), resulting in free-free emission in the X-ray. The gas in these clusters is largely believed to be pressure supported. These clusters are useful for many reasons, including their use as lenses for gravitational lensing and for probing the nature of the universe through their part in the Syaev-Zeldovich Effect, where high energy electrons in the cluster give energy to incoming CMB photons.
+% section phenomenology (end)
+
+\end{document}
+
