@@ -118,8 +118,279 @@ fancyhdr}
 	
 	\n Spiral galaxies like the Milky Way and Andromeda, on the other hand, have younger stellar populations and thus appear bluer. They are rotationally supported and are rich in cold gas. The spiral ``arms'' are not really entities in and of themselves, but more so moving density waves. There are two main baryonic components to a spiral galaxy: its central bulge and the disk.\\
 	
-	\n A larger ``unit'' of cosmology is a galaxy cluster. \textbf{Galaxy Clusters} are massive systems, typically with $M> 10^{14}\,M_\odot$. They are often rich in very hot gas (with $kT\sim \mathrm{keV}$ and above), resulting in free-free emission in the X-ray. The gas in these clusters is largely believed to be pressure supported. These clusters are useful for many reasons, including their use as lenses for gravitational lensing and for probing the nature of the universe through their part in the Syaev-Zeldovich Effect, where high energy electrons in the cluster give energy to incoming CMB photons.
+	\n A larger ``unit'' of cosmology is a galaxy cluster. \textbf{Galaxy Clusters} are massive systems, typically with $M> 10^{14}\,M_\odot$. They are often rich in very hot gas (with $kT\sim \mathrm{keV}$ and above), resulting in free-free emission in the X-ray. The gas in these clusters is largely believed to be pressure supported. These clusters are useful for many reasons, including their use as lenses for gravitational lensing and for probing the nature of the universe through their part in the Sunyaev-Zeldovich Effect, where high energy electrons in the cluster give energy to incoming CMB photons.
 % section phenomenology (end)
+
+% Monday, January 14, 2012
+
+\section{Geometry in Cosmology} % (fold)
+\label{sec:geometry_in_cosmology}
+	\emph{Monday, January 14, 2012}\\
+
+	\n We are lucky to be able to define a \textbf{cosmic time}, $t$ that all observers in the universe can supposedly agree on. We are able to define a \textbf{metric} that defines how distance is measured in the universe. In general, we can define many different metrics, but for a curved universe that is assumed to be homogeneous and isotropic, there are really only three options. There is the flat metric (Euclidean), the open metric (hyperbolic), and the closed metric (spherical). The non-flat geometries present some strange properties that we are not used to in everyday experiences. For instance, a circle about the North pole of a sphere will have a circumference smaller than $2\pi r$, where $r$ is the distance from the North pole to the circle, measured along the surface. Additionally, objects on the surface of a sphere appear to get first smaller as they travel away and then, once they pass the equator (when the observer is on a pole), they appear to get \emph{larger} again.\\
+	
+	\n In two dimensions, we can write the line element in Euclidean (flat) space in Cartesian or spherical coordinates as
+	\begin{equation}
+		\label{eq:geo:1}
+		ds^2 = dx^2+ dy^2 = dr^2 + \Omega^2\,d\theta^2
+	\end{equation}
+	Though these metrics may appear different, they are really the same, just with a change of coordinates. In fact, a result of differential geometry is that no two physically different metrics can be made to look alike with coordinate changes. On the surface of a sphere, though, the metric must change. There is, after all, a maximum distance between two points now. 
+	\begin{equation}
+		\label{eq:geo:2} ds^2 = R_c^2\,d\theta^2 + R_c^2\sin^2\theta\,d\phi^2 = R_c^2\left(d\theta^2 + \sin^2\theta\,d\phi^2\right)
+	\end{equation}
+	Note that $\theta$ here is measured from the North pole, but the position of that pole is really arbitrary, so we are free to place it wherever we like, so long as we are consistent with the following calculations. Here $R_c$ is the radius of curvature. If there surface truly is the surface of a sphere in 3-space, this would be the radius of that sphere, though we need not require our two-dimensional space to be embedded in a three-dimensional space. An equivalent expression of the metric is
+	\begin{equation}
+		\label{eq:geo:3} ds^2 = dr^2 + R_c^2\sin^2\left(\frac{r}{R_c}\right)\,d\phi^2
+	\end{equation}
+	where $r=R_c\theta$. To be complete the corresponding metric for an negative (hyperbolic) curvature
+	\begin{equation}
+		\label{eq:geo:4} ds^2 = dr^2 + R_c^2\sinh^2\left(\frac{r}{R_c}\right)\,d\phi^2
+	\end{equation}
+	(No proof given because\ldots gross.)\\
+	
+	\n In three dimensions, the Euclidean metric generalizes in an obvious way, but for the spherical universe, we get
+	\begin{equation}
+		\label{eq:geo:5} ds^2 = dr^2 + R_c^2\sin^2\left(\frac{r}{R_c}\right)\left[d\theta^2 + \sin^2\theta\,d\phi^2\right]
+	\end{equation}
+	
+	\n If we define
+	\begin{equation}
+		\label{eq:geo:6} x = \left\{\begin{matrix}
+			R_c\sin(r/R_c) & \mathrm{Sphere}\\
+			r & \mathrm{Flat}\\
+			R_c\sinh(r/R_c) & \mathrm{Hyperbolic}
+		\end{matrix}\right.
+	\end{equation}
+	Then the generalized metric is
+	\begin{equation}
+		\label{eq:geo:7} ds^2 = \frac{dx^2}{1-\kappa x^2} + x^2\left[d\theta^2+\sin^2\theta\,d\phi^2\right]
+	\end{equation}
+	where $\kappa=1$ for a closed (spherical) universe, $\kappa=0$ for a flat universe, or $\kappa=-1$ for an open universe. At this point, we have only considered static (time-independent) metrics. The obvious starting point for adding time-dependence is the Minkowski metric from special relativity:
+	\begin{equation}
+		\label{eq:geo:8} ds^2 = -dt^2 + dx^2 + dy^2 + dz^2
+	\end{equation}
+	The resulting, generalized metric is the \textbf{Robertson-Walker} metric:
+	\begin{equation}
+		\label{eq:geo:9} ds^2 = dt^2 - \frac{a^2(t)}{c^2}\left[dr^2 + R^2\sin^2\left(\frac{r}{R_c}\right)\left(d\theta^2+\sin^2\theta\,d\phi^2\right)\right]
+	\end{equation}
+	for closed space, or, more generally,
+	\begin{equation}
+		\label{eq:geo:10} ds^2 = dt^2-\frac{a^2(t)}{c^2}d\tilde{s}^2
+	\end{equation}
+	where $d\tilde{s}^2$ is the metric for the static geometry given in \eqref{eq:geo:7}. The function $a(t)$ controls the expansion or contraction of the manifold, and is called the \textbf{scale factor}. Understanding the evolution of $a(t)$ is crucial to our understanding of the history of the universe. Without knowing $a(t)$ a priori, we can still make a lot of statements about the universe's evolution for any generalized $a(t)$.\\
+	
+	\n As one concrete example, consider the motion of photons along the $r$-direction in flat space. Since photons travel along null geodesics ($ds^2=0$), we have
+	\begin{equation}
+		\label{eq:geo:11} 0=dt^2 - \frac{a^2(t)}{c^2}dr^2 \qquad \Rightarrow \qquad \frac{c\,dt}{a} = dr
+	\end{equation}
+	Suppose two successive wave crests of the photons were emitted at time $t_0$, separated by an interval $\Delta t_0$. They arrive to us at time $t_1$ separated by an interval $\Delta t_1$. Simply using \eqref{eq:geo:11}, we find
+	\begin{equation}
+		\label{eq:geo:12} \int_{t_1}^{t_0}\frac{c\,dt}{a(t)} = -\int_r^0dr =\int_{t_1+\Delta t_1}^{t_0+\Delta t_0}\frac{c\,dt}{a(t)} = \int_{t_1}^{t_0}\frac{c\,dt}{a(t)} + \frac{c\Delta t_0}{a(t_0)} - \frac{c\Delta t_1}{a(t_1)}
+	\end{equation}
+	Which tells us that
+	\begin{equation}
+		\label{eq:geo:13} 0 = \frac{c\Delta t_0}{a(t_0)} - \frac{c\Delta t_1}{a(t_1)} \qquad \Rightarrow \qquad \frac{\Delta t_0}{\Delta t_1} = \frac{a(t_0)}{a(t_1)} = \frac{1}{a(t_1)}
+	\end{equation}
+	where we've used the convention that $a(t_0)$ ($a$ now) is unity. The result here is that photons in an expanding universe \emph{lose energy}. This ratio is also related to the redshift, so we often define the redshift, $z$, via
+	\begin{equation}
+		\label{eq:geo:14} 1+z = \frac{1}{a(t)}
+	\end{equation}
+	This is actually an easily observed phenomenon for any thing sufficiently far away, though we do not regard these faraway objects as actually \emph{moving} per se. Rather, the space between objects is increasing, causing this observed redshift.
+	
+	\subsection{Hubble's Law} % (fold)
+	\label{sub:hubble_s_law}
+	Our earlier result tells us that
+	\begin{equation}
+		\label{eq:hubble:1} \int_{t_1}{t_0} \frac{c}{a(t)}dt = r
+	\end{equation}
+	If we consider small enough time intervals ($t_1\approx t_0$), the integrand is essentially a constant, and we get
+	\begin{equation}
+		\label{eq:hubble:2} r = \frac{c(t_0-t_1)}{a(t_0)}
+	\end{equation}
+	Now if we revisit our friend the redshift and do a taylor expansion around the present time, we get
+	\begin{equation}
+		\label{eq:hubble:3} z = \frac{a(t_0)}{a(t_1)}-1 = \frac{a(t_0)}{a(t_0)+(t_1-t_0)a'(t_0)}-1 = \frac{1}{1-(t_0-t_1)\frac{\dot{a}(t_0)}{a(t_0)}}-1\approx (t_0-t_1)\frac{\dot{a}(t_0)}{a(t_0)} = \frac{r}{c}\dot{a}(t_0)
+	\end{equation}
+	where in the last step we have used \eqref{eq:hubble:2}. So we have recovered the famous law of Hubble,
+	\begin{equation}
+		\label{eq:hubble:4} v\approx H_0 d
+	\end{equation}
+	where $H_0=\dot{a}(t_0)\approx 70\ \mathrm{km/s/Mpc}$. This required nothing other than general geometric arguments.\\
+	
+	\n A few notes on notation: often in the literature, $h$ will be used in place of $H_0$, where $h= H/100\ \mathrm{km/s/Mpc}$. Others still will use $h_{70} = H_0 / 70\ \mathrm{km/s/Mpc}$.
+	% subsection hubble_s_law (end)
+	\subsection{Cosmography} % (fold)
+	\label{sub:cosmography}
+		To measure distances in the universe, we employ the tools of Cosmography. There are many distances of interest. In fact, there are many differences to one particular location! We have the \textbf{angular diameter distance}, defined by
+		\begin{equation}
+			\label{eq:distances:1} D_A = \frac{d}{\theta}
+		\end{equation}
+		where $d$ is the known diameter of the object and $\theta$ is the angular diameter as measured from Earth. Another distance is the \textbf{luminosity distance}, defined by
+		\begin{equation}
+			\label{eq:distances:2} D_\mathrm{L}^2 = \frac{L}{4\pi F}
+		\end{equation}
+		This is used when comparing the observed flux from an object of known luminosity to get a distance. Note that these two distance are not, in general, equal. There is a factor of $(1+z)^2$ between the two. For a spherical geometry, where $R$ is the co-moving coordinate of an object (i.e., $r$ is invariant in time), these two distances are related via
+		\begin{align}
+			\label{eq:eq:distances:3} D_A &= \frac{R_c \sin(r/R_c)}{1+z}\\
+			\label{eq:eq:distances:4} D_L &= D_A(1+z)^2
+		\end{align}
+		To move these results to flat or open geometry, the $\sin$ business would change accordingly. A detailed description of these discrepancies between the measurements of distance are given in Longair, but the short version of it is that in addition to the ``distance'' part that redshift gives to the distance, the redshift of the photons also robs the photons of their former count rate (by a factor of $1+z$) as well as their energy (by another factor of $1+z$).\\
+	
+		\n Another question one might ask is how much volume is contained between two shells at redshifts $z_1$ and $z_2$? This question is very important when making estimates of how many objects one might expect to see during survey (see exercises).\\
+	
+		\n The \textbf{lookback time} is an important quantity that tells us how far back in time we are looking at a particular object. Often we are interested in finding $t(z)$ to relate measured redshifts to lookback times. To do this, we need to use the \textbf{Hubble Parameter}:
+		\begin{equation}
+			\label{eq:distances:5} H(t) = \frac{\dot{a}(t)}{a(t)}
+		\end{equation}
+		Note that the Hubble constant is just the current value of the Hubble parameter. The calculation that needs to be done to find the lookback time is then
+		\begin{equation}
+			\label{eq:distances:6} t(z) = \int_0^z \frac{dz}{H(z)}\frac{1}{1+z}
+		\end{equation}
+	
+		% Wednesday, January 16, 2013
+		\textit{Wednesday, January 16, 2013}\\
+	
+		\n [MISSING STUFF]\\
+	
+		\n The lookback time can be expressed as a function of $z$ as
+		\begin{equation}
+			\label{eq:distances:7} t(z) = \int_0^z\frac{dz'}{H(z')(1+z')}
+		\end{equation}
+		We can also find the lookback distance as a function of $z$:
+		\begin{equation}
+			\label{eq:distances:8} r(z) = \int_0^z \frac{c\,dz'}{H(z')} = \int_{t_0}^\infty \frac{c\,dt}{a'(t)}
+		\end{equation}
+		If we extend $z\to\infty$ we find the age of the universe and the horizon.
+
+	% subsection cosmography (end)
+% section geometry_in_cosmology (end)
+\section{Cosmic Dynamics} % (fold)
+\label{sec:cosmic_dynamics}
+	\subsection{Friedmann's Equation (Classical Derivation)} % (fold)
+	\label{sub:friedmann_s_equation_classical_derivation_}
+		Consider a sphere within a homogeneous and isotropic universe. We wish to find the equation of motion of the particles along the surface of this sphere. For convenience, consider the initial radius to be unity so that we can write the radius at any time as $a(t)$. The acceleration due to the gravitational pull would be
+		\begin{equation}
+			\label{eq:dynamics:1} \ddot{a}(t) = -\frac{GM}{a^2}=-\frac{4\pi}{3}G\rho a
+		\end{equation}
+		where in the second equality we have used the fact that density is constant. If we multiply both sides by $\dot{a}$, we get
+		\begin{equation}
+			\label{eq:dynamics:2} \ddot{a}(t)\dot{a}(t) = -\frac{4\pi}{3}G\rho a \dot{a}
+		\end{equation}
+		Integrating this, we find
+		\begin{equation}
+			\label{eq:dynamics:3} \frac{1}{2}\dot{a}^2=\frac{4\pi}{3}G\rho_0\frac{a_0^3}{a}+\frac{c}{2}
+		\end{equation}
+		If we define the \textbf{critical density} of the universe at the current time as
+		\begin{equation}
+			\label{eq:dynamics:4} \Omega_0=\frac{8\pi G \rho_0}{3H_0^2}
+		\end{equation}
+		and note that at the present time, the equation reads
+		\begin{equation}
+			\label{eq:dynamics:5} \frac{1}{2}\frac{\dot{a}^2(t_0)}{a_0^2} = \frac{4\pi}{3}G\rho_0\frac{a_0}{a_0} + \frac{c}{a_0^2}
+		\end{equation}
+		and finally defining $\dot{a}(t_0)/a(t_0)=H_0$, we may write
+		\begin{equation}
+			\label{eq:dynamics:6} 1 = \Omega_0 + \frac{c}{a_0^2H_0^2}
+		\end{equation}
+		This allows us to rewrite \eqref{eq:dynamics:3} as the ``fake'' \textbf{Friedmann's Equation}
+		\begin{equation}
+			\label{eq:dynamics:7} \left(\frac{\dot{a}}{a}\right)^2 = \Omega_0 H_0^2\left(\frac{a_0}{a}\right)^3+(1-\Omega_0)\left(\frac{a_0}{a}\right)^2
+		\end{equation}
+		This equation reflects three possibilities for the fate of the sphere. First, if the density is below $\Omega_0$, the sphere will expand forever and reach some asymptotic expansion velocity. If the density is exactly the critical density, the sphere will expand forever, but will asymptotically approach zero expansion velocity. Finally, if the sphere is denser than $\Omega_0$, the sphere will eventually collapse back on itself.\\
+		
+		\n To do this ``right'', we need the full machinery of Einstein's equation:
+		\begin{equation}
+			\label{eq:dynamics:8} R_{\mu\nu}-\frac{1}{2}g_{\mu\nu}R = \frac{8\pi G}{c^2}T_{\mu\nu}
+		\end{equation}
+		Where $R_{\mu\nu}$ is the Ricci Tensor, $R=R^\mu_{\phantom{\mu}\mu}$ is the Ricci scalar, and $T_{\mu\nu}$ is the stress-energy tensor of the universe, often taken to be that of a perfect fluid:
+		\begin{equation}
+			\label{eq:dynamics:9}
+			T_{\mu\nu} = \begin{pmatrix}
+			\rho & 0 & 0 & 0\\
+			0 & p & 0 & 0\\
+			0 & 0 & p & 0\\
+			0 & 0 & 0 & p \end{pmatrix}
+		\end{equation}
+		where $P$ is the pressure and $\rho$ is the energy density. We won't go through the details here, but the corresponding version of Friedmann's equation as developed from general relativity is
+		\begin{equation}
+			\label{eq:dynamics:10} \left(\frac{\dot{a}}{a}\right)^2 = \frac{8\pi g\rho}{3}-\frac{\kappa c^2}{a^2 + \frac{1}{3}\Lambda}
+		\end{equation}
+		where $\kappa$ is the curvature ($-1$ for open, $0$ for flat, $+1$ for closed) term and $\Lambda$ is the cosmological constant (if it indeed exists).\\
+		
+		\n The second derivative equation gives
+		\begin{equation}
+			\label{eq:dynamics:11} \ddot{a} = -\frac{4\pi G}{3}a\left(\rho + \frac{3P}{c^2}\right)+\frac{1}{3}\Lambda a
+		\end{equation}
+		where $P$ is the pressure. Combining these results gives the ``better'' Friedmann's equation:
+		\begin{equation}
+			\label{eq:dynamics:12}\boxed{\left(\frac{\dot{a}}{a}\right)^2 = H_0^2\left[\Omega_0\left(1+z\right)^3+(1-\Omega_0-\Omega_\Lambda)(1+z^2) + \Omega_\Lambda\right]}
+		\end{equation}
+		We've technically left out some terms with $\Omega_\gamma(1+z)^4$, which represents the energy density due to radiation, but in our current understanding, that term is negligible. Also, sometimes we see another $\Omega$ defined via $\Omega_\kappa = 1-\Omega_0-\Omega_\Lambda$ to be the energy density provided by curvature (whatever that means). If this is positive, we have open curvature. If it is zero, we have flat curvature, and if it is negative, we have closed curvature. Note that aside from the terms provided by $\Omega_\Lambda$ (and optionally $\Omega_\gamma$), this form of Friedmann's equation matches exactly with \eqref{eq:dynamics:7}.\\
+		
+		\n We should also consider the work done by an expanding universe. From thermodynamics, we have the classic $dU = -p\,dV$ relation, where for our purposes, $V=a^3$. Often we wish to express the pressure as some multiple of the energy density via an \textbf{equation of state}, namely
+		\begin{equation}
+			\label{eq:dynamics:13} \frac{p}{c^2} = w\rho
+		\end{equation}
+		where $w$ is the interesting parameter to be determined. Using this substitution in \eqref{eq:dynamics:11} gives
+		\begin{equation}
+			\label{eq:dynamics:14} \ddot{a} = -\frac{4\pi G}{3} a\rho(1+3w)+\frac{1}{3}\Lambda a
+		\end{equation}
+		Which then gives the differential relation
+		\begin{equation}
+			\label{eq:dynamics:15} d\rho\,a^3 c^2 + da\,3a^2\rho c^2 = -p 3a^2\,da
+		\end{equation}
+		and so the density (of any kind) follows
+		\begin{equation}
+			\label{eq:dynamics:16} \rho \propto (1+z)^{3+3w}
+		\end{equation}
+		We can write the full-blown form of Friedmann's equation, valid at all times as
+		\begin{equation}
+			\label{eq:dynamics:17} \boxed{H^2(z) = H_0^2\left[\Omega_\gamma(z+z)^4 + \Omega_0(1+z)^3 + \Omega_\kappa(1+z)^2 + \Omega_{\mathrm{de}}(1+z)^{3+3w}+\Omega_\Lambda\right]}
+		\end{equation}
+		This particular form allows for both a cosmological constant \emph{and} dark energy. Typically we just assume that $\Omega_{\mathrm{de}}$ is the cosomological constant (i.e., $w=-1$) and we drop the additional term. However, this form is strictly more general.
+	% subsection friedmann_s_equation_classical_derivation_ (end)
+	\subsection{Using Friedmann's Equation} % (fold)
+	\label{sub:using_friedmann_s_equation}
+		We can use Friedmann's equation to make many useful computations. For instance, the cosmic distance in a universe with only matter (all other $\Omega$'s vanish)
+		\begin{equation}
+			\label{eq:dynamics:18} r = \int_0^z \frac{c\,dz'}{H(z')} = \frac{2c}{H_0\Omega_0^2(1+z)}\left\{\Omega_0z+(\Omega_0-1)\left[(\Omega_0z+1)^2-1\right]\right\}
+		\end{equation}
+		If we expand this to first order in $z$, we recover Hubble's Law: $D\approx zc/H_0$. Now if we assume $\Omega_0=1$, which is the Einstein-de Sitter case, this result simplifies to
+		\begin{equation}
+			\label{eq:dynamics:19} D = \frac{2c}{H_0}\left[2-\frac{1}{\sqrt{1+z}}\right]
+		\end{equation}
+		\subsubsection{The Einstein-de Sitter Case} % (fold)
+		\label{ssub:the_einstein_de_sitter_case}
+			In the Einstein-de Sitter universe, Friedmann's equation simplifies dramatically to
+			\begin{equation}
+				\label{eq:dynamics:20} H^2(z) = H_0^2\Omega_0(1+z)^3
+			\end{equation}
+			or simply
+			\begin{equation}
+				\label{eq:dynamics:21} H(z) = H_0\sqrt{\Omega_0}(1+z)^{3/2}
+			\end{equation}
+			Choosing $a$ over $z$ and $H$ gives us
+			\begin{equation}
+				\label{eq:dynamics:22} \frac{\dot{a}}{a} = H_0\Omega_0^{1/2}\frac{1}{a^{3/2}}
+			\end{equation}
+			We can solve for $a(t)$ (which essentially tells us everything) relatively simply:
+			\begin{equation}
+				\label{eq:dynamics:23} \frac{da}{a}a^{3/2} = a^{1/2}\,da = H_0\Omega_0^{1/2}\,dt
+			\end{equation}
+			The solution for $a(t)$ is
+			\begin{equation}
+				\label{eq:dynamics:24} a = \left[\frac{3}{2}H_0 \Omega_0^{1/2}(t-t_0)\right]^{2/3}+1
+			\end{equation}
+			Solving for the current age of the universe in this universe gives us
+			\begin{equation}
+				\label{eq:dynamics:25} t_0 = \frac{2}{3}H_0^{-1}
+			\end{equation}
+			This actually causes problems since we know of objects that are older than this, so we know that we do not live in an Einstein-de Sitter universe.
+		% subsubsection the_einstein_de_sitter_case (end)
+	% subsection using_friedmann_s_equation (end)
+		
+
+% section cosmic_dynamics (end)
 
 \end{document}
 

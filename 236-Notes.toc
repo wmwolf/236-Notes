@@ -2,3 +2,10 @@
 \contentsline {subsection}{\numberline {1.1}The Long View}{3}{subsection.1.1}
 \contentsline {subsection}{\numberline {1.2}The Game Plan}{4}{subsection.1.2}
 \contentsline {section}{\numberline {2}Phenomenology}{5}{section.2}
+\contentsline {section}{\numberline {3}Geometry in Cosmology}{6}{section.3}
+\contentsline {subsection}{\numberline {3.1}Hubble's Law}{8}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Cosmography}{9}{subsection.3.2}
+\contentsline {section}{\numberline {4}Cosmic Dynamics}{10}{section.4}
+\contentsline {subsection}{\numberline {4.1}Friedmann's Equation (Classical Derivation)}{10}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Using Friedmann's Equation}{12}{subsection.4.2}
+\contentsline {subsubsection}{\numberline {4.2.1}The Einstein-de Sitter Case}{13}{subsubsection.4.2.1}
