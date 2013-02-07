@@ -455,7 +455,7 @@ fancyhdr}
 \label{sec:thermal_history_of_the_universe}
 For the nonrelativistic case ($kT\gg mc^2$), a Maxwell-Boltzmann distribution of energies gives a number density 
 \begin{equation}
-	\label{eq:thermal:1} n = \frac{g}{h^3}\int_0^\infty f(\mathbf{p})\,d^3p = g\left(\frac{mkT}{h^2}\right)^{\frac{3}{2}} e^{-\frac{mc^2-\mu}{kT}}
+	\label{eq:thermal:1} n = \frac{g}{h^3}\int_0^\infty f(\mathbf{p})\,d^3p = g\left(\frac{2\pi mkT}{h^2}\right)^{\frac{3}{2}} e^{-\frac{mc^2-\mu}{kT}}
 \end{equation}
 In the relativistic case, however, where $kT\gg mc^2$ and $kT\gg\mu$, things become simpler:
 \begin{equation}
@@ -473,7 +473,7 @@ for bosons and fermions, respectively. For the current CMB with $T\approx 2.7\ \
 \label{sub:era_of_recombination}
 	There came a time when the CMB became cool enough to allow electrons to bind to ions and form neutral atoms. For some reason, this is called \textbf{Recombination}. We would expect this to occur when $kT_{\mathrm{CMB}}\sim 13.6\,\mathrm{eV}$. To do this correctly, we need to use the Saha equation, which gives us the number densities of species at various stages of ionization:
 	\begin{equation}
-		\label{eq:recomb:1} n_i = g_i \left(\frac{m_i kT}{h^2}\right)^{3/2}e^{-\frac{\mu -m_i c^2}{kT}}
+		\label{eq:recomb:1} n_i = g_i \left(\frac{2\pi m_i kT}{h^2}\right)^{3/2}e^{-\frac{\mu -m_i c^2}{kT}}
 	\end{equation}
 	whilst requiring conservation of chemical potential:
 	\begin{equation}
@@ -481,15 +481,15 @@ for bosons and fermions, respectively. For the current CMB with $T\approx 2.7\ \
 	\end{equation}
 	Manipulating the three corresponding version of \eqref{eq:recomb:1} and using \eqref{eq:recomb:2} gives us
 	\begin{equation}
-		\label{eq:recomb:3} \frac{n_{\mathrm{H}}}{n_{e}n_p} = \frac{g_\mathrm{H}}{g_eg_p} \left(\frac{h^2}{m_ekT}\right)^{3/2} e^{-\frac{13.6\,\mathrm{eV}}{kT}}
+		\label{eq:recomb:3} \frac{n_{\mathrm{H}}}{n_{e}n_p} = \frac{g_\mathrm{H}}{g_eg_p} \left(\frac{h^2}{2\pi m_ekT}\right)^{3/2} e^{-\frac{13.6\,\mathrm{eV}}{kT}}
 	\end{equation}
 	If we define $x=n_p/n_{\mathrm{\rm B}} = \frac{n_e}{n_{\rm B}}$ where ``B'' stands for baryons (protons or hydrogen atoms), we can re-express \eqref{eq:recomb:3} in terms of this ionization fraction:
 	\begin{equation}
-		\label{eq:recomb:4} \frac{1-x}{x^2n_{\rm B}} = \left(\frac{h^2}{m_e kT}\right)^{3/2}e^{-\frac{13.6\ \mathrm{eV}}{kT}}
+		\label{eq:recomb:4} \frac{1-x}{x^2n_{\rm B}} = \left(\frac{h^2}{2\pi m_e kT}\right)^{3/2}e^{-\frac{13.6\ \mathrm{eV}}{kT}}
 	\end{equation}
 	now if $\eta$ is the ratio of photon number density and baryon number density, we can rewrite this as
 	\begin{equation}
-		\label{eq:recomb:5} \frac{1-x}{x^2} = \eta n_\gamma\left(\frac{h^2}{m_e kT}\right)^{3/2} e^{-\frac{-13.6\,\mathrm{eV}}{kT}} = \eta\frac{\zeta(3)}{\pi^2}\left(\frac{2\pi k T}{hc}\right)^3 \left( \frac{h^2}{m_e kT}\right)^{3/2} e^{-\frac{13.6\,\mathrm{eV}}{kT}}
+		\label{eq:recomb:5} \frac{1-x}{x^2} = \eta n_\gamma\left(\frac{h^2}{2\pi m_e kT}\right)^{3/2} e^{-\frac{-13.6\,\mathrm{eV}}{kT}} = \eta\frac{\zeta(3)}{\pi^2}\left(\frac{2\pi k T}{hc}\right)^3 \left( \frac{h^2}{2\pi m_e kT}\right)^{3/2} e^{-\frac{13.6\,\mathrm{eV}}{kT}}
 	\end{equation}
 	where in the last form, we used \eqref{eq:thermal:2}. This is the Saha equation, albeit simplified since we neglect the effects of helium and other interfering influences in the universe. When $x$ is large, there are many free electrons, which cause Thomson scattering to affect the paths of photons. Because of this, we are unable to see beyond this ``surface of last scattering'' where the universe itself is effectively opaque. This occurred at about $z\sim 1000$, when matter still dominated the universe. We can do some ugly mathematics to calculate the optical depth due to this thomson scattering as a function of redshift:
 	\begin{equation}
