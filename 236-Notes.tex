@@ -323,7 +323,7 @@ fancyhdr}
 		\end{equation}
 		where $P$ is the pressure. Combining these results gives the ``better'' Friedmann's equation:
 		\begin{equation}
-			\label{eq:dynamics:12}\boxed{\left(\frac{\dot{a}}{a}\right)^2 = H_0^2\left[\Omega_0\left(1+z\right)^3+(1-\Omega_0-\Omega_\Lambda)(1+z^2) + \Omega_\Lambda\right]}
+			\label{eq:dynamics:12}\boxed{\left(\frac{\dot{a}}{a}\right)^2 = H_0^2\left[\Omega_0\left(1+z\right)^3+(1-\Omega_0-\Omega_\Lambda)(1+z)^2 + \Omega_\Lambda\right]}
 		\end{equation}
 		We've technically left out some terms with $\Omega_\gamma(1+z)^4$, which represents the energy density due to radiation, but in our current understanding, that term is negligible. Also, sometimes we see another $\Omega$ defined via $\Omega_\kappa = 1-\Omega_0-\Omega_\Lambda$ to be the energy density provided by curvature (whatever that means). If this is positive, we have open curvature. If it is zero, we have flat curvature, and if it is negative, we have closed curvature. Note that aside from the terms provided by $\Omega_\Lambda$ (and optionally $\Omega_\gamma$), this form of Friedmann's equation matches exactly with \eqref{eq:dynamics:7}.\\
 		
@@ -385,12 +385,129 @@ fancyhdr}
 			\begin{equation}
 				\label{eq:dynamics:25} t_0 = \frac{2}{3}H_0^{-1}
 			\end{equation}
-			This actually causes problems since we know of objects that are older than this, so we know that we do not live in an Einstein-de Sitter universe.
+			This actually causes problems since we know of objects that are older than this, so we know that we do not live in an Einstein-de Sitter universe.\\
 		% subsubsection the_einstein_de_sitter_case (end)
 	% subsection using_friedmann_s_equation (end)
-		
-
 % section cosmic_dynamics (end)
+\section{Cosmography} % (fold)
+\label{sec:cosmography}
+\n \textit{Wednesday, January 23, 2013}\\
 
+	\n Much of observational cosmology focuses on finding a few particular numbers. $H_0$, $q_0$ (the deceleration parameter), $t_0$ (the age of the universe), $\Omega_i$ (the density parameters) all are crucial to our understanding of the evolution of the universe, so measuring them accurately is of the utmost importance. 
+	\subsection{The Search for the Hubble Constant} % (fold)
+	\label{sub:the_search_for_h_0_}
+	A decent part of the last century in cosmology has been invested in getting an accurate measurement of the Hubble constant, $H_0$. Originally it was prioritized so that we could determine distance to objects at small redshift with relative accuracy, but more recently we've found other reasons to want to know the value of $H_0$ to within one percent accuracy.\\
+	
+	\n Now, if we have an accurate measurement of $H_0$, we can constrain values of other cosmological parameters, like $w$, the dark energy equation of state parameter. In the past, these cosmological parameters were dealt with on an individual basis, but modern experiments treat the problem in a multi-dimensional fashion, giving simultaneous ranges for multiple cosmological parameters.\\
+	
+	\n Over time, the value of $H_0$ has fallen from over $h=6$ (from Hubble's first measurements) in the 1920's down to between $h=0.5$ to $h=1.0$ from about 1960-2000. The varied values during those forty years was likely due to under-estimated error bars, which caused quite a kerfuffel among cosmologists. In the last decade, the measurements are converging towards $h=0.7$ to within about ten percent. A new generation of experiments hopes to get the value to within one percent.
+	
+	\subsubsection{The Distance Ladder} % (fold)
+	\label{ssub:the_distance_ladder}
+		Unfortunately, when measuring redshifts of distant galaxies, it is very difficult to separate the effects from cosmic expansion from the doppler shift due to peculiar velocities. To calibrate Hubble's law properly, we need to determine distances through some other means. In determining distances at various length scales around the universe, astronomers make use of the so-called \textbf{distance ladder}, which is a series of methods of determining the distance to an object, with each method reaching further than the last, but leaning on the accuracy of the previous method.\\
+		
+		\n The ``base'' method is the familiar parallax method for determining the distance to nearby stars. For slightly further objects (the Magellanic clouds, nearby galaxies), we can use Cepheid variable stars to determine a distance from the period luminosity relation (Cepheids pulsate with a frequency that is directly related to their luminosity). Since these can be used as a standard candle, we can ascertain a distance from a flux measurement and the $1/r^2$ law. With a second method of distance determination, we can find what the Hubble flow really is, allowing us to compensate for peculiar velocities. The Key Project aimed to do this and came up with a measurement of $H_0 = 72 \pm 7\ \mathrm{km/s/Mpc}$.
+	% subsubsection the_distance_ladder (end)
+	\subsubsection{Beyond the Key Project} % (fold)
+	\label{ssub:beyond_the_key_project}
+		Rather than using Cepheids, newer studies are using type Ia supernovae, bypassing a calibration via the LMC. The idea is that the uncertainty from LMC measurements will be avoided, resulting in a more precise measurement. This process, along with some other breakthroughs allowed Riess et al.~(2011) to reduce the uncertainty down to three percent in the SHOES project.\\
+		
+		\n Competing work from the Carnegie Hubble Project (CHP) instead looked at the mid-infrared for Cepheids which reduced uncertainty in other areas and came to about the same value of $H_0$ with the same uncertainty.
+	% subsubsection beyond_the_key_project (end)
+	% subsection the_search_for_h_0_ (end)
+	\subsection{More Distant Measurements} % (fold)
+	\label{sub:more_distant_measurements}
+		To probe for effects apparent at higher redshifts, we need a robust standard candle. Many options were tried, like the brightest galaxy in a cluster or other less successful methods. To date, the best tool is are type Ia supernovae, which are thought to be the thermonuclear detonation of a C-O white dwarf. The actual progenitor of this system is not known, but they seem to have a uniform luminosity at peak luminosity. Actually, the luminosity is not quite standard, but it is calibrated by the width (in time) of the light curve (often referred to as the ``stretch''). In the future, light curves in the IR will be used since they appear to be truly standardized (``stretch''-independent). There are some difficulties to overcome in this. Errors due to interstellar reddening and atmospheric extinction make high-precision photometry very difficult.\\
+		
+		\n Recent work using Ias as standard candles seem to favor a cosmological constant for dark energy and $\Omega_m\sim 0.27$. However, several challenges still stand in the realm of Type Ia supernova cosmology, including the poorly understood physics behind their creation, selection effects (the brightest events are most likely to be detected, biasing our results), unknown dust contamination, and precise photometric calibration, as mentioned earlier.
+	% subsection more_distant_measurements (end)
+	\subsection{Cosmic Chronometers} % (fold)
+	\label{sub:cosmic_chronometers}
+	Aside from computing distances and the Hubble constant, we also can glean some information about the universe if we can find its age. We mentioned earlier that for an Einstein-de Sitter universe, the age is $t_0 = \frac{2}{3}H_0^{-1}$. If we found the age of the universe to be this, it would be one piece of evidence for (or against) a particular cosmological model. Stellar evolution puts a lower limit on the age of the universe since we see globular clusters with stars around 12 Gyrs old. To date, really all we can do is put lower limits on the age of the universe. It's very difficult to estimate the age of very distant objects, especially since galaxies change over time. As such, this is still an emerging subfield in cosmology. More methods are needed to corroborate the measurements made to date.
+	% subsection cosmic_chronometers (end)
+% section cosmography (end)
+\section{Gravitational Lensing} % (fold)
+\label{sec:gravitational_lensing}
+	% Wednesday, January 30, 2013
+	\textit{Wednesday, January 30, 2013}\\
+	\subsection{Strong Lensing} % (fold)
+	\label{sub:strong_lensing}
+	\textbf{Strong Lensing} refers to the effect of extremely massive objects distorting the incoming light from objects behind. Often the ``lenses'' are large clusters of galaxies changing the image of galaxies behind them. The object behind is the source, and we speak of it being located in the \textbf{source plane}. The lensing object then deflects light from the source through a deflection angle. This can cause the perceived angular diameter of the object to change. Essentially the lens acts as a highly nonlinear mapping from $\mathbb{R}^2$ to $\mathbb{R}^2$. We will often refer to the distance from the deflector to the observer as $D_{\mathrm{d}}$, the distance from the deflector to the source as $D_{\mathrm{ds}}$, and the distance from the source to the observer as $D_{\mathrm{s}}$.\\
+	
+	\n The lensing causes a change in optical path length, but this also affects the arrival time of light from the source. The effect can be expressed mathematically via
+	\begin{equation}
+		\label{eq:strong_lensing:1} t(\vec{\theta}) = \frac{1+z_d}{c}\frac{D_{\mathrm{d}}D_{\mathrm{s}}}{D_{\mathrm{ds}}}\left[\frac{1}{2}(\vec{\theta}-\vec{\beta})^2-\psi(\vec{\theta})\right]
+	\end{equation}
+	Where $\beta$ is the angle between the source and the deflector with respect to the source plane and $\theta$ is the observed angular diameter of the lensed source. The factor of $(\vec{\theta}-\vec{\beta})^2$ is due to the geometry and is the geometric time delay, but the $\psi(\vec{\theta})$ is the gravitational effect, essentially accounting for the fact that the photons must travel along longer geodesics in deeper gravitational wells. There are many useful equations that can be derived from this phenomenon that allows us to learn about cosmic distances, but I do not list them here. They are well documented in the lecture slides and the reference paper.\\
+	
+	\n There are many reasons to study strong lensing. When observing a lensing event, we can very accurately measure the mass enclosed within the Einstein radius, the projected orientation of the mass, the projected ellipticity of the mass, and sometimes the derivative of the enclosed mass. The lensing matter need not be visible, so this is great for probing dark matter distributions. The strengths of strong lensing as a method are that the mass is independent of a dynamic state and that we can measure the total mass (regardless of the nature of that mass). Weaknesses lie in the susceptibility to projection effects and that we can \emph{only} measure total mass.\\
+	
+	\n Most relevant for our purposes is using strong lensing to do cosmography with arrival time delays. Since the time delay is proportional to the Fermat distance, $D_{\mathrm{d}}D_{\mathrm{s}}/D_{\mathrm{ds}}$, we gain information about the Hubble constant and some function of the cosmological parameters,
+	\begin{equation}
+		\label{eq:strong_lensing:2} \Delta t \propto D_{\mathrm{\Delta t}}(z_s,z_d)\propto H_0^{-1} f(\Omega_m,w,\ldots)
+	\end{equation}
+	After measuring the time delay and solving for the gravitational potential, in theory this can translate into the desired cosmological parameters.
+
+	% subsection strong_lensing (end)
+
+% section gravitational_lensing (end)
+\section{Thermal History of the Universe} % (fold)
+\label{sec:thermal_history_of_the_universe}
+For the nonrelativistic case ($kT\gg mc^2$), a Maxwell-Boltzmann distribution of energies gives a number density 
+\begin{equation}
+	\label{eq:thermal:1} n = \frac{g}{h^3}\int_0^\infty f(\mathbf{p})\,d^3p = g\left(\frac{mkT}{h^2}\right)^{\frac{3}{2}} e^{-\frac{mc^2-\mu}{kT}}
+\end{equation}
+In the relativistic case, however, where $kT\gg mc^2$ and $kT\gg\mu$, things become simpler:
+\begin{equation}
+	\label{eq:thermal:2} n_b = \frac{g\zeta(3)}{\pi^2} \left(\frac{2\pi k T}{hc}\right)^3
+\end{equation}
+and
+\begin{equation}
+	\label{eq:thermal:3} n_f = \frac{3}{4}\frac{g\zeta(3)}{\pi^2} \left(\frac{2\pi k T}{hc}\right)^3
+\end{equation}
+for bosons and fermions, respectively. For the current CMB with $T\approx 2.7\ \mathrm{K}$, this corresponds to a number density of around $4\times 10^8\ \mathrm{m^{-3}}$. Compare that to the baryonic number density, which is about $1\ \mathrm{m^{-3}}$, so there are about a billion photons per baryon in the universe. The corresponding amount of energy is roughly equivalent to what would be gained by fusing all hydrogen in the universe into helium.\\
+
+\n Since the radiation energy density scales as $(1+z)^4$ and matter energy density scales only as $(1+z)^3$, there was a time when radiation dominated the universe. In fact, aside from a few awkward transitions, the universe has always been dominated by a single component. We happen to live in the awkward transition from matter to dark energy right now. As such, many calculations for the evolution of the scale factor become trivial when in the regime of a single-component universe.
+
+\subsection{Era of Recombination} % (fold)
+\label{sub:era_of_recombination}
+	There came a time when the CMB became cool enough to allow electrons to bind to ions and form neutral atoms. For some reason, this is called \textbf{Recombination}. We would expect this to occur when $kT_{\mathrm{CMB}}\sim 13.6\,\mathrm{eV}$. To do this correctly, we need to use the Saha equation, which gives us the number densities of species at various stages of ionization:
+	\begin{equation}
+		\label{eq:recomb:1} n_i = g_i \left(\frac{m_i kT}{h^2}\right)^{3/2}e^{-\frac{\mu -m_i c^2}{kT}}
+	\end{equation}
+	whilst requiring conservation of chemical potential:
+	\begin{equation}
+		\label{eq:recomb:2} \mu(e^-) + \mu(p^+) = \mu(\mathrm{H})
+	\end{equation}
+	Manipulating the three corresponding version of \eqref{eq:recomb:1} and using \eqref{eq:recomb:2} gives us
+	\begin{equation}
+		\label{eq:recomb:3} \frac{n_{\mathrm{H}}}{n_{e}n_p} = \frac{g_\mathrm{H}}{g_eg_p} \left(\frac{h^2}{m_ekT}\right)^{3/2} e^{-\frac{13.6\,\mathrm{eV}}{kT}}
+	\end{equation}
+	If we define $x=n_p/n_{\mathrm{\rm B}} = \frac{n_e}{n_{\rm B}}$ where ``B'' stands for baryons (protons or hydrogen atoms), we can re-express \eqref{eq:recomb:3} in terms of this ionization fraction:
+	\begin{equation}
+		\label{eq:recomb:4} \frac{1-x}{x^2n_{\rm B}} = \left(\frac{h^2}{m_e kT}\right)^{3/2}e^{-\frac{13.6\ \mathrm{eV}}{kT}}
+	\end{equation}
+	now if $\eta$ is the ratio of photon number density and baryon number density, we can rewrite this as
+	\begin{equation}
+		\label{eq:recomb:5} \frac{1-x}{x^2} = \eta n_\gamma\left(\frac{h^2}{m_e kT}\right)^{3/2} e^{-\frac{-13.6\,\mathrm{eV}}{kT}} = \eta\frac{\zeta(3)}{\pi^2}\left(\frac{2\pi k T}{hc}\right)^3 \left( \frac{h^2}{m_e kT}\right)^{3/2} e^{-\frac{13.6\,\mathrm{eV}}{kT}}
+	\end{equation}
+	where in the last form, we used \eqref{eq:thermal:2}. This is the Saha equation, albeit simplified since we neglect the effects of helium and other interfering influences in the universe. When $x$ is large, there are many free electrons, which cause Thomson scattering to affect the paths of photons. Because of this, we are unable to see beyond this ``surface of last scattering'' where the universe itself is effectively opaque. This occurred at about $z\sim 1000$, when matter still dominated the universe. We can do some ugly mathematics to calculate the optical depth due to this thomson scattering as a function of redshift:
+	\begin{equation}
+		\label{eq:recomb:6} \tau_T = 0.035\frac{\Omega_b}{\Omega_m^{1/2}}hz^{3/2}\qquad [z\gg 1;\ x=1]
+	\end{equation}
+	\subsection{Radiation Dominated Era} % (fold)
+	\label{sub:radiation_dominated_era}
+	At first, baryons and radiation were coupled through Thomason scattering, so photons could not travel freely about the universe. After recombination, they decouple, and each component expanded adiabatically with temperature scaling via $T\sim 1/a$ for photons and $T\sim 1/a^2$ for baryons. The exchange of energy from photons to electrons via scattering gives us a temperature change rae of
+	\begin{equation}
+		\label{eq:radiation:1} \frac{dT_e}{dt} = \frac{4}{3}\sigma_T\epsilon_r\left(\frac{T_r-T_e}{m_ec}\right)
+	\end{equation}
+	And since the heat capacity of the CMB is much higher, changes in the electron temperature occur on a timescale much shorter than the age of the universe:
+	\begin{equation}
+		\label{eq:radiation:2} \tau = \frac{T_e}{dT_e/dt} = 7.4\times 10^{19}z^{-4}\ \mathrm{s}
+	\end{equation}
+	A similar process occurs for the hydrogen atoms later in time, but since the number of free electrons is decreasing, this effect is depressed, and we get effective decoupling by $z\sim 150$. After this time, photons and matter essentially stop communicating with each other.
+	% subsection radiation_dominated_era (end)
+% subsection era_of_recombination (end)
+% section thermal_history_of_the_universe (end)
 \end{document}
 

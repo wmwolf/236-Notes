@@ -9,3 +9,14 @@
 \contentsline {subsection}{\numberline {4.1}Friedmann's Equation (Classical Derivation)}{10}{subsection.4.1}
 \contentsline {subsection}{\numberline {4.2}Using Friedmann's Equation}{12}{subsection.4.2}
 \contentsline {subsubsection}{\numberline {4.2.1}The Einstein-de Sitter Case}{13}{subsubsection.4.2.1}
+\contentsline {section}{\numberline {5}Cosmography}{13}{section.5}
+\contentsline {subsection}{\numberline {5.1}The Search for the Hubble Constant}{13}{subsection.5.1}
+\contentsline {subsubsection}{\numberline {5.1.1}The Distance Ladder}{14}{subsubsection.5.1.1}
+\contentsline {subsubsection}{\numberline {5.1.2}Beyond the Key Project}{14}{subsubsection.5.1.2}
+\contentsline {subsection}{\numberline {5.2}More Distant Measurements}{14}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Cosmic Chronometers}{15}{subsection.5.3}
+\contentsline {section}{\numberline {6}Gravitational Lensing}{15}{section.6}
+\contentsline {subsection}{\numberline {6.1}Strong Lensing}{15}{subsection.6.1}
+\contentsline {section}{\numberline {7}Thermal History of the Universe}{16}{section.7}
+\contentsline {subsection}{\numberline {7.1}Era of Recombination}{17}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}Radiation Dominated Era}{17}{subsection.7.2}
