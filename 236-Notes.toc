@@ -20,3 +20,4 @@
 \contentsline {section}{\numberline {7}Thermal History of the Universe}{16}{section.7}
 \contentsline {subsection}{\numberline {7.1}Era of Recombination}{17}{subsection.7.1}
 \contentsline {subsection}{\numberline {7.2}Radiation Dominated Era}{17}{subsection.7.2}
+\contentsline {section}{\numberline {8}Growth of Structure}{18}{section.8}

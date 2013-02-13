@@ -491,13 +491,13 @@ for bosons and fermions, respectively. For the current CMB with $T\approx 2.7\ \
 	\begin{equation}
 		\label{eq:recomb:5} \frac{1-x}{x^2} = \eta n_\gamma\left(\frac{h^2}{2\pi m_e kT}\right)^{3/2} e^{-\frac{-13.6\,\mathrm{eV}}{kT}} = \eta\frac{\zeta(3)}{\pi^2}\left(\frac{2\pi k T}{hc}\right)^3 \left( \frac{h^2}{2\pi m_e kT}\right)^{3/2} e^{-\frac{13.6\,\mathrm{eV}}{kT}}
 	\end{equation}
-	where in the last form, we used \eqref{eq:thermal:2}. This is the Saha equation, albeit simplified since we neglect the effects of helium and other interfering influences in the universe. When $x$ is large, there are many free electrons, which cause Thomson scattering to affect the paths of photons. Because of this, we are unable to see beyond this ``surface of last scattering'' where the universe itself is effectively opaque. This occurred at about $z\sim 1000$, when matter still dominated the universe. We can do some ugly mathematics to calculate the optical depth due to this thomson scattering as a function of redshift:
+	where in the last form, we used \eqref{eq:thermal:2}. This is the Saha equation, albeit simplified since we neglect the effects of helium and other interfering influences in the universe. When $x$ is large, there are many free electrons, which cause Thomson scattering to affect the paths of photons. Because of this, we are unable to see beyond this ``surface of last scattering'' where the universe itself is effectively opaque. This occurred at about $z\sim 1000$, when matter still dominated the universe. We can do some ugly mathematics to calculate the optical depth due to this Thomson scattering as a function of redshift:
 	\begin{equation}
 		\label{eq:recomb:6} \tau_T = 0.035\frac{\Omega_b}{\Omega_m^{1/2}}hz^{3/2}\qquad [z\gg 1;\ x=1]
 	\end{equation}
 	\subsection{Radiation Dominated Era} % (fold)
 	\label{sub:radiation_dominated_era}
-	At first, baryons and radiation were coupled through Thomason scattering, so photons could not travel freely about the universe. After recombination, they decouple, and each component expanded adiabatically with temperature scaling via $T\sim 1/a$ for photons and $T\sim 1/a^2$ for baryons. The exchange of energy from photons to electrons via scattering gives us a temperature change rae of
+	At first, baryons and radiation were coupled through Thomason scattering, so photons could not travel freely about the universe. After recombination, they decouple, and each component expanded adiabatically with temperature scaling via $T\sim 1/a$ for photons and $T\sim 1/a^2$ for baryons. The exchange of energy from photons to electrons via scattering gives us a temperature change rate of
 	\begin{equation}
 		\label{eq:radiation:1} \frac{dT_e}{dt} = \frac{4}{3}\sigma_T\epsilon_r\left(\frac{T_r-T_e}{m_ec}\right)
 	\end{equation}
@@ -505,9 +505,48 @@ for bosons and fermions, respectively. For the current CMB with $T\approx 2.7\ \
 	\begin{equation}
 		\label{eq:radiation:2} \tau = \frac{T_e}{dT_e/dt} = 7.4\times 10^{19}z^{-4}\ \mathrm{s}
 	\end{equation}
-	A similar process occurs for the hydrogen atoms later in time, but since the number of free electrons is decreasing, this effect is depressed, and we get effective decoupling by $z\sim 150$. After this time, photons and matter essentially stop communicating with each other.
+	A similar process occurs for the hydrogen atoms later in time, but since the number of free electrons is decreasing, this effect is depressed, and we get effective decoupling by $z\sim 150$. After this time, photons and matter essentially stop communicating with each other.\\
 	% subsection radiation_dominated_era (end)
 % subsection era_of_recombination (end)
 % section thermal_history_of_the_universe (end)
+
+\n MISSING NUCLEOSYNTHESIS MATERIAL (KIND OF IMPORTANT)
+\section{Growth of Structure} % (fold)
+\label{sec:growth_of_structure}
+	% Wednesday, February 13, 2013
+	\textit{Wednesday, February 13, 2013}\\
+	
+	\n In the study of structure formation, we wish to understand one important quantity, $\Delta = \delta\rho/\rho$, where $\rho$ is the average background density of the universe. This gives us a sense of how strong a density perturbation is and whether or not it will result in the creation of structure. For small $\Delta$, we are in the linear regime, and the analytics are relatively simple. When $\Delta\sim 1$, things become more complex. The density perturbations typically grow large enough to be ground by gravity and detach from the Hubble Flow. Are interest presently is to investigate this regime of density formation. Current densities of galaxies and clusters show they must have collapsed at $z\ll 100$, well after recombination. Before then, everything was linear.\\
+	
+	\n Jeans instability is a slow process in an expanding universe, as opposed to the rather violent event known from stellar formation and other applications. Expanding the fluid equations about the average density of the universe gives us
+	\begin{equation}
+		\label{eq:struc1} \frac{d^2\Delta}{dt^2} + 2H \frac{d\Delta}{dt} = \frac{c_s^2}{\rho_0 a^2}\nabla_c^2\delta\rho + 4\pi G \delta \rho
+	\end{equation}
+	the presence of the Hubble parameter separates this from normal Jeans theory and that found in an expanding universe. We can recast this in Fourier space (now with $H=0$ to find growing and decaying modes, given by the dispersion relation
+	\begin{equation}
+		\label{eq:struc2} \omega^2 = k^2c_s^2 - 4\pi G\rho
+	\end{equation}
+	We also get a characteristic Jeans' length:
+	\begin{equation}
+		\label{eq:struc3} \lambda_j  c_s\left(\frac{\pi}{G\rho}\right)^{1/2}
+	\end{equation}
+	For density perturbations that are larger than the Jeans' length, collapse ensures. Smaller perturbations are supported by pressure.\\
+	
+	\n However, this process is \emph{damped} by the expansion of the universe (the $H$ term).  The fluid equation in Fourier space is 
+	\begin{equation}
+		\label{eq:struc4} \frac{d^2\Delta}{dt^2}+2H\frac{d\Delta}{dt} = \Delta(4\pi G\rho_0-k^2c_s^2)
+	\end{equation}
+	For an Einstein-de Sitter universe, the results is that $\Delta\propto t^{2/3}$ so that $\Delta\propto a\propto (1+z)^{-1}$. That is, instabilities only grow linearly. This is far too slow to create the large-scale structure that we see now from the small instabilities observed in the CMB. In fact, more realistic cosmologies cause even more damping. For a long time, this was seen as a huge problem in our understanding of cosmology and galactic formation.\\
+	
+	\n Note that this analysis only holds for small perturbations since they are Newtonian in nature. Soon we will see the more general picture that comes from GR. Additionally, there is no ``gravitational crossing time'' for communication in this picture. That is, gravity acts \emph{instantaneously} in this current analysis, rather than taking a light crossing time. However, even in full-blown GR theory, this January molasses-like structure formation is still observed. It turns out that dark matter has to save the day yet again to produce the relatively rapid formation of galaxies and clusters.\\
+	
+	\n An important point here is that observing the growth of structure provides an additional constraint on the Hubble parameter, assuming we understand the growth of structure well enough to probe this damping term.\\
+	
+	\n As density perturbations grow, velocity dispersions also grow according to
+	\begin{equation}
+		\label{eq:struc5} \frac{d\mathbf{u}}{dt} + 2H\mathbf{u} = -\frac{1}{a^2}\nabla_c\delta\phi
+	\end{equation}
+	since as voids become voider and over-densities become more overdense, matter is attracted more and more away from the voids. This spawned another industry in determining the Hubble constant via studying peculiar velocities at various redshifts. Measuring the peculiar velocities of clusters depends strongly on finding the distances to said clusters, which is not a simple task. Because of this difficulty, this approach is not taken much anymore to constrain cosmological parameters.
+% section growth_of_structure (end)
 \end{document}
 
