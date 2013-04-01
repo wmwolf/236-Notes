@@ -21,3 +21,12 @@
 \contentsline {subsection}{\numberline {7.1}Era of Recombination}{17}{subsection.7.1}
 \contentsline {subsection}{\numberline {7.2}Radiation Dominated Era}{17}{subsection.7.2}
 \contentsline {section}{\numberline {8}Growth of Structure}{18}{section.8}
+\contentsline {section}{\numberline {9}Dark Matter}{21}{section.9}
+\contentsline {section}{\numberline {10}Large Scale Structure}{22}{section.10}
+\contentsline {subsection}{\numberline {10.1}Galaxy Clustering}{22}{subsection.10.1}
+\contentsline {subsection}{\numberline {10.2}Initial Power Spectrum}{23}{subsection.10.2}
+\contentsline {subsection}{\numberline {10.3}Measuring Fluctuations}{23}{subsection.10.3}
+\contentsline {section}{\numberline {11}The Cosmic Microwave Background}{24}{section.11}
+\contentsline {subsection}{\numberline {11.1}The Last Scattering Surface}{24}{subsection.11.1}
+\contentsline {subsection}{\numberline {11.2}The CMB Power Spectrum}{24}{subsection.11.2}
+\contentsline {subsection}{\numberline {11.3}Neutrinos and the CMB}{25}{subsection.11.3}
